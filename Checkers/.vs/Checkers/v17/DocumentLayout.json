@@ -3,68 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\services\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\services\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\services\\gamebusinesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\services\\gamebusinesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\gamecommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\gamecommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\gamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\gamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\viewmodels\\menucommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\menucommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\services\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\services\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\gamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\gamevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\resources\\about.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\resources\\about.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\gamecommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\gamecommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\services\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\services\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\menucommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\menucommandsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\basenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\basenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\services\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\services\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\resources\\about.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\resources\\about.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\viewmodels\\scorevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\scorevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\scorevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|c:\\users\\ioana\\source\\repos\\map\\chechers\\checkers\\checkers\\viewmodels\\playervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\viewmodels\\playervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\viewmodels\\playervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\models\\basenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|solutionrelative:checkers\\models\\basenotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A27B7672-8474-404E-86AD-F6D841AA5E31}|Checkers\\Checkers.csproj|C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\checkers\\enums\\piecetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,85 +106,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GameBusinessLogic.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\GameBusinessLogic.cs",
               "RelativeDocumentMoniker": "Checkers\\Services\\GameBusinessLogic.cs",
               "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\GameBusinessLogic.cs",
               "RelativeToolTip": "Checkers\\Services\\GameBusinessLogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJcAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwJEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T11:56:23.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\Helper.cs",
-              "RelativeDocumentMoniker": "Checkers\\Services\\Helper.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\Helper.cs",
-              "RelativeToolTip": "Checkers\\Services\\Helper.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAQwKkAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:56:30.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Piece.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Piece.cs",
-              "RelativeDocumentMoniker": "Checkers\\Models\\Piece.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Piece.cs",
-              "RelativeToolTip": "Checkers\\Models\\Piece.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:48:31.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameCommandsVM.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameCommandsVM.cs",
-              "RelativeDocumentMoniker": "Checkers\\ViewModels\\GameCommandsVM.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameCommandsVM.cs",
-              "RelativeToolTip": "Checkers\\ViewModels\\GameCommandsVM.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAuwBMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:56:09.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "GameVM.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameVM.cs",
               "RelativeDocumentMoniker": "Checkers\\ViewModels\\GameVM.cs",
               "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameVM.cs",
               "RelativeToolTip": "Checkers\\ViewModels\\GameVM.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAIwCkAAAAdAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvykAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-08T11:48:48.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuCommandsVM.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\MenuCommandsVM.cs",
-              "RelativeDocumentMoniker": "Checkers\\ViewModels\\MenuCommandsVM.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\MenuCommandsVM.cs",
-              "RelativeToolTip": "Checkers\\ViewModels\\MenuCommandsVM.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAAEIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:23:38.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Checkers\\MainWindow.xaml",
@@ -196,20 +144,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Cell.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Cell.cs",
-              "RelativeDocumentMoniker": "Checkers\\Models\\Cell.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Cell.cs",
-              "RelativeToolTip": "Checkers\\Models\\Cell.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAiwDcAAAAQAAAA",
+              "DocumentIndex": 3,
+              "Title": "GameCommandsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameCommandsVM.cs",
+              "RelativeDocumentMoniker": "Checkers\\ViewModels\\GameCommandsVM.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\GameCommandsVM.cs",
+              "RelativeToolTip": "Checkers\\ViewModels\\GameCommandsVM.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:55:45.279Z",
+              "WhenOpened": "2024-04-08T11:56:09.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "Cell.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Cell.cs",
+              "RelativeDocumentMoniker": "Checkers\\Models\\Cell.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Cell.cs",
+              "RelativeToolTip": "Checkers\\Models\\Cell.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:55:45.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Piece.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Piece.cs",
+              "RelativeDocumentMoniker": "Checkers\\Models\\Piece.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Piece.cs",
+              "RelativeToolTip": "Checkers\\Models\\Piece.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:48:31.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Paths.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\Paths.cs",
               "RelativeDocumentMoniker": "Checkers\\Services\\Paths.cs",
@@ -217,12 +189,48 @@
               "RelativeToolTip": "Checkers\\Services\\Paths.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBEAAACAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:49:36.384Z",
+              "WhenOpened": "2024-04-08T11:49:36.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseNotification.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\BaseNotification.cs",
+              "RelativeDocumentMoniker": "Checkers\\Models\\BaseNotification.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\BaseNotification.cs",
+              "RelativeToolTip": "Checkers\\Models\\BaseNotification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:55:43.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuCommandsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\MenuCommandsVM.cs",
+              "RelativeDocumentMoniker": "Checkers\\ViewModels\\MenuCommandsVM.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\MenuCommandsVM.cs",
+              "RelativeToolTip": "Checkers\\ViewModels\\MenuCommandsVM.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwEcAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:23:38.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\Helper.cs",
+              "RelativeDocumentMoniker": "Checkers\\Services\\Helper.cs",
+              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Services\\Helper.cs",
+              "RelativeToolTip": "Checkers\\Services\\Helper.cs",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAYwE4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T11:56:30.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Checkers\\MainWindow.xaml.cs",
@@ -230,12 +238,11 @@
               "RelativeToolTip": "Checkers\\MainWindow.xaml.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAAABgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:36:40.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T11:36:40.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "about.txt",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Resources\\about.txt",
               "RelativeDocumentMoniker": "Checkers\\Resources\\about.txt",
@@ -243,12 +250,11 @@
               "RelativeToolTip": "Checkers\\Resources\\about.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-08T14:28:03.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T14:28:03.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PlayerVM.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\PlayerVM.cs",
               "RelativeDocumentMoniker": "Checkers\\ViewModels\\PlayerVM.cs",
@@ -256,12 +262,11 @@
               "RelativeToolTip": "Checkers\\ViewModels\\PlayerVM.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:23:46.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T12:23:46.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\Player.cs",
               "RelativeDocumentMoniker": "Checkers\\Models\\Player.cs",
@@ -269,12 +274,11 @@
               "RelativeToolTip": "Checkers\\Models\\Player.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:55:47.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T11:55:47.516Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\App.config",
               "RelativeDocumentMoniker": "Checkers\\App.config",
@@ -282,8 +286,7 @@
               "RelativeToolTip": "Checkers\\App.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-04-08T12:23:49.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T12:23:49.588Z"
             },
             {
               "$type": "Document",
@@ -311,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ScoreVM.cs",
               "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\ViewModels\\ScoreVM.cs",
               "RelativeDocumentMoniker": "Checkers\\ViewModels\\ScoreVM.cs",
@@ -319,21 +322,7 @@
               "RelativeToolTip": "Checkers\\ViewModels\\ScoreVM.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T12:23:51.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BaseNotification.cs",
-              "DocumentMoniker": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\BaseNotification.cs",
-              "RelativeDocumentMoniker": "Checkers\\Models\\BaseNotification.cs",
-              "ToolTip": "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\Checkers\\Checkers\\Models\\BaseNotification.cs",
-              "RelativeToolTip": "Checkers\\Models\\BaseNotification.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:55:43.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T12:23:51.68Z"
             },
             {
               "$type": "Document",
@@ -345,8 +334,7 @@
               "RelativeToolTip": "Checkers\\Enums\\PieceType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:48:45.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T11:48:45.115Z"
             },
             {
               "$type": "Document",
@@ -358,8 +346,7 @@
               "RelativeToolTip": "Checkers\\Enums\\PieceColor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T11:48:13.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-08T11:48:13.307Z"
             },
             {
               "$type": "Document",

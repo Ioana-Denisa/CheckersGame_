@@ -23,53 +23,53 @@ namespace Checkers.ViewModels
             this.gameBusinessLogic = businessLogic;
         }
 
-        public ICommand AboutCommand
-        {
-            get
-            {
-                if (aboutCommand == null)
-                {
-                    aboutCommand = new NonGenericCommand(gameBusinessLogic.About);
-                }
-                return this.aboutCommand;
-            }
-        }
+        //public ICommand AboutCommand
+        //{
+        //    get
+        //    {
+        //        if (aboutCommand == null)
+        //        {
+        //            aboutCommand = new NonGenericCommand(gameBusinessLogic.About);
+        //        }
+        //        return this.aboutCommand;
+        //    }
+        //}
 
-        public ICommand SaveCommand
-        {
-            get
-            {
-                if (saveCommand == null)
-                {
-                    saveCommand = new NonGenericCommand(gameBusinessLogic.SaveGame);
-                }
-                return saveCommand;
-            }
-        }
+        //public ICommand SaveCommand
+        //{
+        //    get
+        //    {
+        //        if (saveCommand == null)
+        //        {
+        //            saveCommand = new NonGenericCommand(gameBusinessLogic.SaveGame);
+        //        }
+        //        return saveCommand;
+        //    }
+        //}
 
-        public ICommand LoadCommand
-        {
-            get
-            {
-                if (loadCommand == null)
-                {
-                    loadCommand = new NonGenericCommand(gameBusinessLogic.LoadGame);
-                }
-                return loadCommand;
-            }
-        }
+        //public ICommand LoadCommand
+        //{
+        //    get
+        //    {
+        //        if (loadCommand == null)
+        //        {
+        //            loadCommand = new NonGenericCommand(gameBusinessLogic.LoadGame);
+        //        }
+        //        return loadCommand;
+        //    }
+        //}
 
-        public ICommand NewCommand
-        {
-            get
-            {
-                if (resetCommand == null)
-                {
-                    resetCommand = new NonGenericCommand(gameBusinessLogic.ResetGame);
-                }
-                return resetCommand;
-            }
-        }
+        //public ICommand NewCommand
+        //{
+        //    get
+        //    {
+        //        if (resetCommand == null)
+        //        {
+        //            resetCommand = new NonGenericCommand(gameBusinessLogic.ResetGame);
+        //        }
+        //        return resetCommand;
+        //    }
+        //}
     }
 }
     

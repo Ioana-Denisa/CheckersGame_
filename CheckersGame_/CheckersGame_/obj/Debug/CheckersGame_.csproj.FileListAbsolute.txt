@@ -1,0 +1,16 @@
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.csproj.AssemblyReference.cache
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\App.g.cs
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame__MarkupCompile.cache
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\bin\Debug\CheckersGame_.exe.config
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\bin\Debug\CheckersGame_.exe
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\bin\Debug\CheckersGame_.pdb
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\MainWindow.g.cs
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame__MarkupCompile.lref
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\MainWindow.baml
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.g.resources
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.Properties.Resources.resources
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.csproj.GenerateResource.cache
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.csproj.CoreCompileInputs.cache
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.exe
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\CheckersGame_.pdb
+C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\obj\Debug\GeneratedInternalTypeHelper.g.cs
