@@ -10,7 +10,7 @@
         <local:GameVM />
     </Window.DataContext>
     <Grid>
-        <ItemsControl Name="grid" ItemsSource="{Binding gameBoard}" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <ItemsControl Name="grid" ItemsSource="{Binding GameBoard}" VerticalAlignment="Center" HorizontalAlignment="Center">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <ItemsControl ItemsSource="{Binding}">
@@ -21,23 +21,47 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Grid>
-                                    <Border Width="70" Height="70" BorderThickness="1" BorderBrush="#000000">
-                                        <Image Source="{Binding CellViewModel.BackgroundCell}" Stretch="UniformToFill"/>
-                                    </Border>
+                                <Border x:Name="border" Width="70" Height="70" BorderThickness="1" BorderBrush="#000000">
                                     <Button Command="{Binding ClickCommand}" CommandParameter="{Binding CellViewModel}">
                                         <Button.Template>
-                                            <ControlTemplate>
-                                                <Image Source="{Binding CellViewModel.Piece.ImagePath}" Width="60" Height="60 " Margin="4"/>
+                                            <ControlTemplate TargetType="Button">
+                                                <Grid>
+                                                    <Border BorderBrush="Transparent" BorderThickness="1">
+                                                        <Border.Style>
+                                                            <Style TargetType="Border">
+                                                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                                                <Style.Triggers>
+                                                                    <DataTrigger Binding="{Binding IsAvailable}" Value="True">
+                                                                        <Setter Property="BorderBrush" Value="Red"/>
+                                                                    </DataTrigger>
+                                                                </Style.Triggers>
+                                                            </Style>
+                                                        </Border.Style>
+                                                        <Image Source="{Binding CellViewModel.BackgroundCell}" Stretch="UniformToFill"/>
+                                                    </Border>
+                                                    <Image Source="{Binding CellViewModel.Piece.ImagePath}" Width="60" Height="60"/>
+                                                </Grid>
                                             </ControlTemplate>
                                         </Button.Template>
                                     </Button>
-                                </Grid>
+                                </Border>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
+        <Menu Margin="0,-1,0,565" DockPanel.Dock="Top" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top" MaxWidth="1400" MaxHeight="80" FontSize="16">
+            <MenuItem Header="Menu File" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16">
+                <MenuItem Header="New" Command="{Binding menuCommands.NewCommand}"/>
+                <!--<MenuItem Header="Save" Command="{Binding menuCommands.SaveCommand}"/>
+                <MenuItem Header="Open" Command="{Binding menuCommands.LoadCommand}"/>-->
+            </MenuItem>
+        </Menu>
+        <Menu Margin="100,-1,0,0" DockPanel.Dock="Top" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top" MaxWidth="1400" MaxHeight="80" FontSize="16">
+            <MenuItem Header="Help" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16">
+                <!--<MenuItem Header="About" Command="{Binding menuCommands.AboutCommand}"/>-->
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

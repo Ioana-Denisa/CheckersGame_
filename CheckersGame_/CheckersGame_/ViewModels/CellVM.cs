@@ -12,15 +12,15 @@ namespace CheckersGame_.ViewModels
 {
     class CellVM:BaseNotification
     {
-        public GameLogic gameLogicVM;
-        public Cell cellVM;
+        private GameLogic gameLogicVM;
+        private Cell cellViewModel;
 
         private ICommand clickCommand;
 
         public CellVM(GameLogic game, Cell cell)
         {
            gameLogicVM=game;
-            cellVM=cell;
+            cellViewModel=cell;
         }
 
 
@@ -28,12 +28,22 @@ namespace CheckersGame_.ViewModels
         {
             get
             {
-                return cellVM;
+                return cellViewModel;
             }
             set
             {
-                this.cellVM = value;
+                this.cellViewModel = value;
                 NotifyPropertyChanged("CellViewModel");
+            }
+        }
+
+        public string IsAvailable
+        {
+            get { return cellViewModel.IsAvailable; }
+            set
+            {
+                this.IsAvailable = value;
+                NotifyPropertyChanged();
             }
         }
 

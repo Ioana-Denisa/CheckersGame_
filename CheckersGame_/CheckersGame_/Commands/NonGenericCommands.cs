@@ -1,14 +1,13 @@
-﻿using Checkers.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Checkers.Commands
+namespace CheckersGame_.Commands
 {
-    class NonGenericCommand:ICommand
+    class NonGenericCommand : ICommand
     {
         private Action commandTask;
         private Predicate<object> canExecuteTask;

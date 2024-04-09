@@ -8,12 +8,12 @@ namespace Checkers.Services
 {
     class Paths
     {
-        public const string redPiece = "/CheckersGame_;component/Resources/pieceRed.png";
-        public const string whitePiece = "/CheckersGame_;component/Resources/pieceWhite.png";
+        public const string redPiece = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\pieceRed.png";
+        public const string whitePiece = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\pieceWhite.png";
         public const string redKingPiece = "/CheckersGame_;component/Resources/pieceRedKing.png";
         public const string whiteKingPiece = "/CheckersGame_;component/Resources/pieceWhiteKing.png";
-        public const string backgroundLight = "/CheckersGame_;component/Resources/backgroundLight.jpg";
-        public const string backgroundDark = "/CheckersGame_;component/Resources/backgroundDark.jpg";
-        public const string availableMoves = "/CheckersGame_;component/Resources/availableMoves.png";
+        public const string backgroundLight = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\backgroundLight.jpg";
+        public const string backgroundDark = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\backgroundDark.jpg";
+        public const string availableMoves = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\availableMoves.png";
     }
 }

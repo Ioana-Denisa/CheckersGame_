@@ -55,11 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\NonGenericCommands.cs" />
     <Compile Include="Services\GameLogic.cs" />
     <Compile Include="Services\Helper.cs" />
     <Compile Include="Services\Paths.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
+    <Compile Include="ViewModels\MenuCommandsVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

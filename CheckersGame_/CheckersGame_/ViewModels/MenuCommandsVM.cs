@@ -1,26 +1,25 @@
-﻿using Checkers.Commands;
-using Checkers.Services;
+﻿using CheckersGame_.Commands;
+using CheckersGame_.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Checkers.ViewModels
+namespace CheckersGame_.ViewModels
 {
     class MenuCommandsVM
-    {
-        private GameBusinessLogic gameBusinessLogic;
+    { 
+        private GameLogic gameLogic;
         private ICommand aboutCommand;
         private ICommand resetCommand;
         private ICommand loadCommand;
         private ICommand saveCommand;
 
-        public MenuCommandsVM(GameBusinessLogic businessLogic)
+        public MenuCommandsVM(GameLogic game)
         {
-            this.gameBusinessLogic = businessLogic;
+            this.gameLogic = game;
         }
 
         //public ICommand AboutCommand
@@ -29,7 +28,7 @@ namespace Checkers.ViewModels
         //    {
         //        if (aboutCommand == null)
         //        {
-        //            aboutCommand = new NonGenericCommand(gameBusinessLogic.About);
+        //            aboutCommand = new NonGenericCommand(gameLogic.About);
         //        }
         //        return this.aboutCommand;
         //    }
@@ -59,18 +58,16 @@ namespace Checkers.ViewModels
         //    }
         //}
 
-        //public ICommand NewCommand
-        //{
-        //    get
-        //    {
-        //        if (resetCommand == null)
-        //        {
-        //            resetCommand = new NonGenericCommand(gameBusinessLogic.ResetGame);
-        //        }
-        //        return resetCommand;
-        //    }
-        //}
+        public ICommand NewCommand
+        {
+            get
+            {
+                if (resetCommand == null)
+                {
+                    resetCommand = new NonGenericCommand(gameLogic.ResetGame);
+                }
+                return resetCommand;
+            }
+        }
     }
 }
-    
-

@@ -13,7 +13,8 @@ namespace Checkers.Models
         private Position position;
         private string backgroundCell;
         private Piece piece;
-        private string availableMoves;
+        private string isAvailable;
+     
 
         public Cell(int row, int column, string image, Piece piece)
         {
@@ -31,14 +32,13 @@ namespace Checkers.Models
             }
         }
 
-        public string AvailableMoves
+        public string IsAvailable
         {
-            get { return availableMoves; }
-            set
-            {
-                availableMoves = value;
-                NotifyPropertyChanged("AbailableMoves");
+            get { return isAvailable; }
+            set { isAvailable = value;
+                NotifyPropertyChanged();
             }
+
         }
 
         public string BackgroundCell
