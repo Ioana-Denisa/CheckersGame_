@@ -14,49 +14,50 @@ namespace CheckersGame_.ViewModels
         private GameLogic gameLogic;
         private ICommand aboutCommand;
         private ICommand resetCommand;
-        private ICommand loadCommand;
+        private ICommand openCommand;
         private ICommand saveCommand;
+        private ICommand statisticsCommand;
 
         public MenuCommandsVM(GameLogic game)
         {
             this.gameLogic = game;
         }
 
-        //public ICommand AboutCommand
-        //{
-        //    get
-        //    {
-        //        if (aboutCommand == null)
-        //        {
-        //            aboutCommand = new NonGenericCommand(gameLogic.About);
-        //        }
-        //        return this.aboutCommand;
-        //    }
-        //}
+        public ICommand AboutCommand
+        {
+            get
+            {
+                if (aboutCommand == null)
+                {
+                    aboutCommand = new NonGenericCommand(gameLogic.About);
+                }
+                return this.aboutCommand;
+            }
+        }
 
-        //public ICommand SaveCommand
-        //{
-        //    get
-        //    {
-        //        if (saveCommand == null)
-        //        {
-        //            saveCommand = new NonGenericCommand(gameBusinessLogic.SaveGame);
-        //        }
-        //        return saveCommand;
-        //    }
-        //}
+        public ICommand SaveCommand
+        {
+            get
+            {
+                if (saveCommand == null)
+                {
+                    saveCommand = new NonGenericCommand(gameLogic.SaveGame);
+                }
+                return saveCommand;
+            }
+        }
 
-        //public ICommand LoadCommand
-        //{
-        //    get
-        //    {
-        //        if (loadCommand == null)
-        //        {
-        //            loadCommand = new NonGenericCommand(gameBusinessLogic.LoadGame);
-        //        }
-        //        return loadCommand;
-        //    }
-        //}
+        public ICommand OpenCommand
+        {
+            get
+            {
+                if (openCommand == null)
+                {
+                    openCommand = new NonGenericCommand(gameLogic.Open);
+                }
+                return openCommand;
+            }
+        }
 
         public ICommand NewCommand
         {
@@ -67,6 +68,18 @@ namespace CheckersGame_.ViewModels
                     resetCommand = new NonGenericCommand(gameLogic.ResetGame);
                 }
                 return resetCommand;
+            }
+        }
+
+        public ICommand StatisticsCommand
+        {
+            get
+            {
+                if(statisticsCommand==null)
+                {
+                    statisticsCommand=new NonGenericCommand(gameLogic.ShowStatistics);
+                }
+                return statisticsCommand;
             }
         }
     }

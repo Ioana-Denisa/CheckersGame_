@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Commands\NonGenericCommands.cs" />
     <Compile Include="Services\GameLogic.cs" />
+    <Compile Include="Services\GameServices.cs" />
     <Compile Include="Services\Helper.cs" />
     <Compile Include="Services\Paths.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
@@ -114,13 +115,27 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\availableMoves.png" />
     <Resource Include="Resources\backgroundDark.jpg" />
     <Resource Include="Resources\backgroundLight.jpg" />
     <Resource Include="Resources\pieceRed.png" />
     <Resource Include="Resources\pieceRedKing.png" />
     <Resource Include="Resources\pieceWhite.png" />
     <Resource Include="Resources\pieceWhiteKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\about.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\score.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pieceWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\statistics.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\maxPieces.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

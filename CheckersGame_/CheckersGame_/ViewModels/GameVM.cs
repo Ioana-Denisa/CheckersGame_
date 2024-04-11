@@ -6,22 +6,30 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace CheckersGame_.ViewModels
 {
-    class GameVM
+    class GameVM : BaseNotification
     {
-        private GameLogic gameVM;
-        private Player playerTurnVM;
-        public MenuCommandsVM menuCommands { get; set; }
+        private GameLogic game;
+        private Player playerTurn;
+        private GameServices gameServices;
+        private int redPiece;
+        private int whitePiece;
+
+        public MenuCommandsVM menuCommands {  get; set; }
         public GameVM()
         {
-            ObservableCollection<ObservableCollection<Cell>> board=Helper.InitGameBoard();
-            playerTurnVM=new Player(PieceColor.Red);
-            gameVM=new GameLogic(board,playerTurnVM);
-            GameBoard=CellBoardToCellVMBoard(board);
-            menuCommands = new MenuCommandsVM(gameVM);
+            ObservableCollection<ObservableCollection<Cell>> board = Helper.InitGameBoard();
+            PlayerTurn = new Player(PieceColor.Red);
+            GameServices = new GameServices(this);
+            game = new GameLogic(board, PlayerTurn, gameServices);
+            gameBoard = CellBoardToCellVMBoard(board);
+            menuCommands = new MenuCommandsVM(game);
 
+            redPiece = Helper.GetScore().RedWinner;
+            whitePiece=Helper.GetScore().WhiteWinner;
         }
 
         private ObservableCollection<ObservableCollection<CellVM>> CellBoardToCellVMBoard(ObservableCollection<ObservableCollection<Cell>> board)
@@ -33,7 +41,7 @@ namespace CheckersGame_.ViewModels
                 for (int j = 0; j < board[i].Count; j++)
                 {
                     Cell c = board[i][j];
-                    CellVM cellVM = new CellVM(gameVM,c);
+                    CellVM cellVM = new CellVM(game, c);
                     line.Add(cellVM);
                 }
                 result.Add(line);
@@ -41,6 +49,68 @@ namespace CheckersGame_.ViewModels
             return result;
         }
 
-        public ObservableCollection<ObservableCollection<CellVM>> GameBoard {  get; set; }
+
+
+        public int RedPieces
+        {
+            get { return redPiece; }
+            set
+            {
+                redPiece = value;
+                NotifyPropertyChanged("RedPieces");
+            }
+        }
+
+        public int WhitePieces
+        {
+            get { return whitePiece; }
+            set
+            {
+                whitePiece = value;
+                NotifyPropertyChanged("WhitePieces");
+            }
+        }
+
+        public Player PlayerTurn
+        {
+            get { return playerTurn; }
+            set
+            {
+                playerTurn = value;
+                NotifyPropertyChanged("PlayerTurn");
+            }
+        }
+
+        public GameServices GameServices
+        {
+            get { return gameServices; }
+            set
+            {
+                gameServices = value;
+                NotifyPropertyChanged("GameServices");
+            }
+        }
+
+        public GameLogic GameLogic
+        {
+            get { return game; }
+            set
+            {
+                this.game = value;
+                NotifyPropertyChanged("GameLogic");
+            }
+        }
+
+        public ObservableCollection<ObservableCollection<CellVM>> GameBoard
+        {
+            get { return gameBoard; }
+            set
+            {
+                gameBoard = value;
+                NotifyPropertyChanged("GameBoard");
+            }
+        }
+
+        public ObservableCollection<ObservableCollection<CellVM>> gameBoard;
     }
 }

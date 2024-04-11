@@ -24,5 +24,7 @@ namespace CheckersGame_
         {
             InitializeComponent();
         }
+
+ 
     }
 }

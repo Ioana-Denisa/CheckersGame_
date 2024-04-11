@@ -28,6 +28,7 @@ namespace Checkers.Models
             this.imagePath = "";
         }
 
+   
         public PieceType TypePiece
         {
             get { return typePice; }

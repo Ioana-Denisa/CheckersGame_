@@ -37,7 +37,7 @@ namespace Checkers.Models
             set
             {
                 this.imagePath = value;
-                NotifyPropertyChanged("PlayerImagePath");
+                NotifyPropertyChanged("ImagePath");
             }
         }
     }

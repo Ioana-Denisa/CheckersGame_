@@ -24,6 +24,13 @@ namespace CheckersGame_.ViewModels
         }
 
 
+        public GameLogic GameLogicVM
+        {
+            get { return gameLogicVM; }
+            set {  gameLogicVM = value;
+                NotifyPropertyChanged("GameLogicVM");
+            }
+        }
         public Cell CellViewModel
         {
             get
@@ -37,12 +44,12 @@ namespace CheckersGame_.ViewModels
             }
         }
 
-        public string IsAvailable
+        public bool IsAvailable
         {
             get { return cellViewModel.IsAvailable; }
             set
             {
-                this.IsAvailable = value;
+                cellViewModel.IsAvailable = value;
                 NotifyPropertyChanged();
             }
         }

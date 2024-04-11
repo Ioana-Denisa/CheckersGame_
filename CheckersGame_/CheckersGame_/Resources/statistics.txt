@@ -1,0 +1,3 @@
+Score: Red 9 White: 5
+Maximum number of white pieces: 3
+Maximum number of red pieces: 6

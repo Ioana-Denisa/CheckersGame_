@@ -1,24 +1,36 @@
 ﻿using Checkers.Models;
 using Checkers.Services;
+using CheckersGame_.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CheckersGame_.Services
 {
-    class GameLogic : BaseNotification
+    class GameLogic
     {
         private ObservableCollection<ObservableCollection<Cell>> board;
         private Player playerTurn;
-        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn)
+        private GameServices gameServices;
+        private Score score;
+        private bool extraJump = false;
+        private static int MAX_PIECE_RED = 0;
+        private static int MAX_PIECE_WHITE = 0;
+
+        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn, GameServices game)
         {
             this.board = cells;
             this.playerTurn = turn;
-
+            this.gameServices = game;
+            this.score = Helper.GetScore();
+            SetMaxPieces();
+            Statistics();
         }
 
         public Player PlayerTurn
@@ -29,6 +41,17 @@ namespace CheckersGame_.Services
                 this.PlayerTurn = value;
             }
         }
+
+        public Score Score
+        {
+            get { return score; }
+            set
+            {
+                this.score = value;
+            }
+        }
+
+
 
         private bool VerifyCoordinateFirstCell(Cell cell, Position position)
         {
@@ -80,6 +103,35 @@ namespace CheckersGame_.Services
             }
         }
 
+        public void SearchMultipleJump(Cell cell)
+        {
+            List<Position> neighboursCell = new List<Position>();
+            Helper.SearchAllNeighboursForCell(cell, neighboursCell);
+
+            foreach (Position position in neighboursCell)
+            {
+                if (VerifyCoordinateSecondCell(cell, position)&& board[cell.Position.x + position.x][cell.Position.y + position.y].Piece!=null && board[cell.Position.x + position.x][cell.Position.y + position.y].Piece.ColorPiece != cell.Piece.ColorPiece)
+                {
+                    if (VerifyNoPieceAtTheSecondCell(cell, position))
+                    {
+                        Helper.currentNeighbours.Add(board[cell.Position.x + 2 * position.x][cell.Position.y + 2 * position.y]);
+                    }
+                }
+            }
+        }
+
+        public bool VerifyMultipleJump(Cell cell)
+        {
+            SearchMultipleJump(cell);
+
+            if (Helper.currentNeighbours.Count != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
         private void SwitchPlayer(Cell cell)
         {
             if (cell.Piece.ColorPiece == PieceColor.White)
@@ -110,35 +162,98 @@ namespace CheckersGame_.Services
             return false;
         }
 
-
-        private void MoveOverPiece(Cell destination)
+        private void DropPieces()
         {
-            if (Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y+2 == destination.Position.y)
-                board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y + 1].Piece = null;
-            else if(Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y-2 == destination.Position.y)
-                board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y - 1].Piece = null;
-            else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y - 2 == destination.Position.y)
-                board[Helper.CurrentCell.Position.x -1][Helper.CurrentCell.Position.y - 1].Piece = null;
-            else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y + 2 == destination.Position.y)
-                board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y + 1].Piece = null;
-
-        }
-        private static void SetKingPiece(Cell cell)
-        {
-            if (cell.Position.x == 0 && cell.Piece.ColorPiece == PieceColor.Red)
+            if (Helper.CurrentCell.Piece.ColorPiece == PieceColor.Red)
             {
-                cell.Piece.TypePiece = PieceType.King;
-                cell.Piece.ImagePath = Paths.redKingPiece;
-            }
-            else if (cell.Position.x == 7 && cell.Piece.ColorPiece == PieceColor.White)
-            {
-                cell.Piece.TypePiece = PieceType.King;
-                cell.Piece.ImagePath = Paths.whiteKingPiece;
+                gameServices.WhitePieces--;
             }
             else
             {
-                cell.Piece = Helper.CurrentCell.Piece;
+                gameServices.RedPieces--;
             }
+        }
+
+
+        public void WriteScore()
+        {
+            score = Helper.GetScore();
+
+            if (gameServices.RedPieces == 0 || gameServices.RedPieces < gameServices.WhitePieces)
+            {
+                score.WhiteWinner = score.WhiteWinner + 1;
+                Helper.WriteScore(score.RedWinner, score.WhiteWinner);
+            }
+            else if (gameServices.WhitePieces == 0 || gameServices.WhitePieces < gameServices.RedPieces)
+            {
+                score.RedWinner = score.RedWinner + 1;
+                Helper.WriteScore(score.RedWinner, score.WhiteWinner);
+            }
+
+            if (gameServices.RedPieces > MAX_PIECE_RED)
+                MAX_PIECE_RED = gameServices.RedPieces;
+            if (gameServices.WhitePieces > MAX_PIECE_WHITE)
+                MAX_PIECE_WHITE = gameServices.WhitePieces;
+
+            if (gameServices.WhitePieces > gameServices.RedPieces)
+                MessageBox.Show("Player white win!");
+            else
+                MessageBox.Show("Player red win!");
+
+            Statistics();
+            WriteMaxPieces();
+
+        }
+        private void MoveOverPiece(Cell destination)
+        {
+
+            if (Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y + 2 == destination.Position.y)
+            {
+                extraJump = true;
+                DropPieces();
+                board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y + 1].Piece = null;
+            }
+            else if (Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y - 2 == destination.Position.y)
+            {
+                extraJump = true;
+                DropPieces();
+                board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y - 1].Piece = null;
+            }
+            else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y - 2 == destination.Position.y)
+            {
+                extraJump = true;
+                DropPieces();
+                board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y - 1].Piece = null;
+            }
+            else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y + 2 == destination.Position.y)
+            {
+                extraJump = true;
+                DropPieces();
+                board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y + 1].Piece = null;
+            }
+            else
+                extraJump = false;
+            
+        }
+
+
+
+        private static void SetKingPiece(Cell cell)
+        {
+            if (cell.Piece.TypePiece != PieceType.King)
+            {
+                if (cell.Position.x == 0 && cell.Piece.ColorPiece == PieceColor.Red)
+                {
+                    cell.Piece.TypePiece = PieceType.King;
+                    cell.Piece.ImagePath = Paths.redKingPiece;
+                }
+                else if (cell.Position.x == 7 && cell.Piece.ColorPiece == PieceColor.White)
+                {
+                    cell.Piece.TypePiece = PieceType.King;
+                    cell.Piece.ImagePath = Paths.whiteKingPiece;
+                }
+            }
+
         }
 
         public void ClickAction(Cell cell)
@@ -147,8 +262,6 @@ namespace CheckersGame_.Services
             {
                 Helper.CurrentCell = cell;
                 SearchPosibleMoves(cell);
-                SwitchPlayer(cell);
-
             }
             else if (cell.Piece == null)
             {
@@ -158,16 +271,90 @@ namespace CheckersGame_.Services
                     MoveOverPiece(cell);
                     SetKingPiece(cell);
                     Helper.CurrentCell.Piece = null;
-                    Helper.CurrentNeighbourns.Clear();
+                    if(!extraJump && Helper.currentNeighbours.Count==0)
+                    {
+                        SwitchPlayer(cell);
+                    }
+                    else
+                    {
+                        Helper.CurrentNeighbourns.Clear();
+                        Helper.CurrentCell = cell;
+                        SearchMultipleJump(cell);
+                    }
+
+                    if (gameServices.RedPieces == 0 || gameServices.WhitePieces == 0)
+                    {
+                        WriteScore();
+                        ResetGame();
+                    }
                 }
 
             }
-
         }
+
 
         public void ResetGame()
         {
-            Helper.ResetGame(board);
+            playerTurn.PlayerColor = PieceColor.Red;
+            playerTurn.ImagePath = Paths.redPiece;
+            score = Helper.GetScore();
+            Helper.ResetGame(board, gameServices);
+        }
+
+        public void Open()
+        {
+            Helper.OpenGame(board, gameServices, playerTurn);
+        }
+
+
+        public void SaveGame()
+        {
+            Helper.SaveGame(board, gameServices);
+        }
+
+        public void About()
+        {
+            Helper.About();
+        }
+
+        public void Statistics()
+        {
+            using (StreamWriter writer = new StreamWriter(Paths.statisticsFile, false))
+            {
+                writer.WriteLine("Score: Red " + score.RedWinner + " White: " + score.WhiteWinner);
+                writer.WriteLine("Maximum number of white pieces: " + MAX_PIECE_WHITE);
+                writer.WriteLine("Maximum number of red pieces: " + MAX_PIECE_RED);
+            }
+        }
+
+        public void ShowStatistics()
+        {
+            Statistics();
+
+            using (var reader = new StreamReader(Paths.statisticsFile))
+            {
+                MessageBox.Show(reader.ReadToEnd(), "Statistics", MessageBoxButton.OK);
+            }
+        }
+
+
+        public void SetMaxPieces()
+        {
+            using (var reader = new StreamReader(Paths.maxPiecesFile))
+            {
+                string line = reader.ReadLine();
+                string[] pieces = line.Split(' ');
+                MAX_PIECE_RED = int.Parse(pieces[0]);
+                MAX_PIECE_WHITE = int.Parse(pieces[1]);
+            }
+        }
+
+        public void WriteMaxPieces()
+        {
+            using (var writer = new StreamWriter(Paths.maxPiecesFile))
+            {
+                writer.WriteLine(MAX_PIECE_RED + " " + MAX_PIECE_WHITE);
+            }
         }
     }
 }
