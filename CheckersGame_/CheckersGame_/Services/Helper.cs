@@ -148,7 +148,7 @@ namespace CheckersGame_.Services
 
             using (var reader = new StreamReader(pathFile))
             {
-                MessageBox.Show(reader.ReadToEnd(), "About", MessageBoxButton.OKCancel);
+                MessageBox.Show(reader.ReadToEnd(), "About", MessageBoxButton.OK);
             }
         }
 

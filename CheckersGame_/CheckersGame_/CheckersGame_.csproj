@@ -115,7 +115,6 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\backgroundDark.jpg" />
     <Resource Include="Resources\backgroundLight.jpg" />
     <Resource Include="Resources\pieceRed.png" />
     <Resource Include="Resources\pieceRedKing.png" />
@@ -136,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\maxPieces.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\backgroundDark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

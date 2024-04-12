@@ -13,13 +13,14 @@ using System.Windows;
 
 namespace CheckersGame_.Services
 {
-    class GameLogic
+    class GameLogic:BaseNotification
     {
         private ObservableCollection<ObservableCollection<Cell>> board;
         private Player playerTurn;
         private GameServices gameServices;
         private Score score;
-        private bool extraJump = false;
+        private bool extraJump ;
+        private bool multipleJump;
         private static int MAX_PIECE_RED = 0;
         private static int MAX_PIECE_WHITE = 0;
 
@@ -29,6 +30,7 @@ namespace CheckersGame_.Services
             this.playerTurn = turn;
             this.gameServices = game;
             this.score = Helper.GetScore();
+            extraJump = false;
             SetMaxPieces();
             Statistics();
         }
@@ -39,6 +41,16 @@ namespace CheckersGame_.Services
             set
             {
                 this.PlayerTurn = value;
+            }
+        }
+
+        public bool MultipleJump
+        {
+            get { return multipleJump; }
+            set
+            {
+                multipleJump = value;
+                NotifyPropertyChanged("MultipleJump");
             }
         }
 
@@ -105,12 +117,13 @@ namespace CheckersGame_.Services
 
         public void SearchMultipleJump(Cell cell)
         {
+            Helper.currentNeighbours.Clear();
             List<Position> neighboursCell = new List<Position>();
             Helper.SearchAllNeighboursForCell(cell, neighboursCell);
 
             foreach (Position position in neighboursCell)
             {
-                if (VerifyCoordinateSecondCell(cell, position)&& board[cell.Position.x + position.x][cell.Position.y + position.y].Piece!=null && board[cell.Position.x + position.x][cell.Position.y + position.y].Piece.ColorPiece != cell.Piece.ColorPiece)
+                if (VerifyCoordinateSecondCell(cell, position) && board[cell.Position.x + position.x][cell.Position.y + position.y].Piece != null && board[cell.Position.x + position.x][cell.Position.y + position.y].Piece.ColorPiece != cell.Piece.ColorPiece)
                 {
                     if (VerifyNoPieceAtTheSecondCell(cell, position))
                     {
@@ -124,11 +137,7 @@ namespace CheckersGame_.Services
         {
             SearchMultipleJump(cell);
 
-            if (Helper.currentNeighbours.Count != 0)
-            {
-                return true;
-            }
-            return false;
+            return Helper.currentNeighbours.Count != 0;
         }
 
 
@@ -140,6 +149,7 @@ namespace CheckersGame_.Services
                 Helper.PlayerTurn.ImagePath = Paths.redPiece;
                 playerTurn.PlayerColor = PieceColor.Red;
                 playerTurn.ImagePath = Paths.redPiece;
+
             }
             else
             {
@@ -148,6 +158,7 @@ namespace CheckersGame_.Services
                 playerTurn.PlayerColor = PieceColor.White;
                 playerTurn.ImagePath = Paths.whitePiece;
             }
+            Helper.currentNeighbours.Clear();
         }
 
         private bool MovePiece(Cell destination)
@@ -231,9 +242,9 @@ namespace CheckersGame_.Services
                 DropPieces();
                 board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y + 1].Piece = null;
             }
-            else
+            if (!multipleJump || !VerifyMultipleJump(destination) )
                 extraJump = false;
-            
+
         }
 
 
@@ -258,7 +269,7 @@ namespace CheckersGame_.Services
 
         public void ClickAction(Cell cell)
         {
-            if (cell != Helper.CurrentCell && cell.Piece != null && cell.Piece.ColorPiece == playerTurn.PlayerColor)
+            if (cell != Helper.CurrentCell && cell.Piece != null && cell.Piece.ColorPiece == playerTurn.PlayerColor && !extraJump)
             {
                 Helper.CurrentCell = cell;
                 SearchPosibleMoves(cell);
@@ -271,7 +282,9 @@ namespace CheckersGame_.Services
                     MoveOverPiece(cell);
                     SetKingPiece(cell);
                     Helper.CurrentCell.Piece = null;
-                    if(!extraJump && Helper.currentNeighbours.Count==0)
+
+
+                    if (!extraJump)
                     {
                         SwitchPlayer(cell);
                     }
@@ -281,6 +294,7 @@ namespace CheckersGame_.Services
                         Helper.CurrentCell = cell;
                         SearchMultipleJump(cell);
                     }
+
 
                     if (gameServices.RedPieces == 0 || gameServices.WhitePieces == 0)
                     {

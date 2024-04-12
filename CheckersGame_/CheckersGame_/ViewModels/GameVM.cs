@@ -18,7 +18,7 @@ namespace CheckersGame_.ViewModels
         private int redPiece;
         private int whitePiece;
 
-        public MenuCommandsVM menuCommands {  get; set; }
+        public MenuCommandsVM menuCommands { get; set; }
         public GameVM()
         {
             ObservableCollection<ObservableCollection<Cell>> board = Helper.InitGameBoard();
@@ -27,9 +27,8 @@ namespace CheckersGame_.ViewModels
             game = new GameLogic(board, PlayerTurn, gameServices);
             gameBoard = CellBoardToCellVMBoard(board);
             menuCommands = new MenuCommandsVM(game);
-
             redPiece = Helper.GetScore().RedWinner;
-            whitePiece=Helper.GetScore().WhiteWinner;
+            whitePiece = Helper.GetScore().WhiteWinner;
         }
 
         private ObservableCollection<ObservableCollection<CellVM>> CellBoardToCellVMBoard(ObservableCollection<ObservableCollection<Cell>> board)
@@ -49,7 +48,15 @@ namespace CheckersGame_.ViewModels
             return result;
         }
 
-
+        public bool MultipleJump
+        {
+            get { return game.MultipleJump; }
+            set
+            {
+                game.MultipleJump = value;
+                NotifyPropertyChanged("MultipleJump");
+            }
+        }
 
         public int RedPieces
         {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckersGame_.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" MinHeight="750" MinWidth="1100" Height="750" Width="1100" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <local:GameVM />
     </Window.DataContext>
@@ -13,7 +13,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\Resources\Checkers Game.png"/>
         </Grid.Background>
-        <ItemsControl Name="grid" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,69,0,0" BorderBrush="White" BorderThickness="3" Height="566" Width="570">
+        <ItemsControl Name="grid" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="155,104,0,0" BorderBrush="White" BorderThickness="3" Height="565" Width="567">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <ItemsControl ItemsSource="{Binding}">
@@ -24,7 +24,7 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Border x:Name="border" Width="70" Height="70" BorderThickness="2" BorderBrush="#000000">
+                                <Border x:Name="border" Width="70" Height="70" BorderThickness="1" BorderBrush="#000000">
                                     <Button Command="{Binding ClickCommand}" CommandParameter="{Binding CellViewModel}">
                                         <Button.Template>
                                             <ControlTemplate TargetType="Button">
@@ -55,30 +55,24 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <Menu Margin="0,-1,0,565" DockPanel.Dock="Top" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top" MaxWidth="1400" MaxHeight="80" FontSize="16">
-            <MenuItem Header="Menu File" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16" Background="White" BorderBrush="White">
+            <MenuItem Header="Menu File" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16" Background="#353330" BorderBrush="#353330" Foreground="#FFD8B654">
                 <MenuItem Header="New" Command="{Binding menuCommands.NewCommand}"/>
                 <MenuItem Header="Save" Command="{Binding menuCommands.SaveCommand}"/>
                 <MenuItem Header="Open" Command="{Binding menuCommands.OpenCommand}"/>
                 <MenuItem Header="Statistic" Command="{Binding menuCommands.StatisticsCommand}"/>
                 <MenuItem>
                     <MenuItem.Header>
-                        <CheckBox Content="Allow Multile Jumps" IsChecked="{x:Null}"/>
+                        <CheckBox Foreground="#FFD8B654 " Content="Allow Multile Jumps" IsChecked="{Binding MultipleJump}"/>
                     </MenuItem.Header>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="Help" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16" BorderBrush="White" Background="White">
-                <MenuItem Header="About" Command="{Binding menuCommands.AboutCommand}"/>
+            <MenuItem Header="Help" Height="35" Width="100" MaxWidth="200" MaxHeight="100" FontSize="16" BorderBrush="#353330" Background="#353330" Foreground="#FFD8B654">
+                <MenuItem Header="About"  Command="{Binding menuCommands.AboutCommand}"/>
             </MenuItem>
         </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="770,89,0,0" TextWrapping="Wrap" Text="Player WHITE Number of piece:" VerticalAlignment="Top" Width="150" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Height="50" Foreground="White" />
-        <TextBlock HorizontalAlignment="Left" Margin="785,479,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Text="Player RED Number of piece: " FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Height="50" Foreground="White" />
-        <TextBlock HorizontalAlignment="Left" Margin="920,111,0,0" TextWrapping="Wrap" Text="{Binding GameServices.WhitePieces}" VerticalAlignment="Top" Height="20" Width="55" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="White" />
-        <TextBlock HorizontalAlignment="Left" Margin="940,504,0,0" TextWrapping="Wrap" Text="{Binding GameServices.RedPieces}" VerticalAlignment="Top" Height="20" Width="55" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="820,319,0,0" TextWrapping="Wrap" Text="Turn: " VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="30" Height="51" Width="115"/>
-        <TextBlock HorizontalAlignment="Left" Margin="851,359,0,0" TextWrapping="Wrap" Text="{Binding PlayerTurn.PlayerColor}" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="40" FontWeight="Bold" Height="46" Width="159"/>
-        <TextBlock HorizontalAlignment="Left" Margin="785,528,0,0" TextWrapping="Wrap" Text="Games won:" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Height="46" Width="159"/>
-        <TextBlock HorizontalAlignment="Left" Margin="770,138,0,0" TextWrapping="Wrap" Text="Games won:" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Height="46" Width="159"/>
-        <TextBlock HorizontalAlignment="Left" Margin="886,138,0,0" TextWrapping="Wrap" Text="{Binding WhitePieces}" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Height="26" Width="54"/>
-        <TextBlock HorizontalAlignment="Left" Margin="900,529,0,0" TextWrapping="Wrap" Text="{Binding RedPieces}" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" Height="21" Width="39"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1030,99,0,0" TextWrapping="Wrap" Text="{Binding GameServices.WhitePieces}" VerticalAlignment="Top" Height="20" Width="55" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="#D8B654" />
+        <TextBlock Margin="1030,634,15,0" TextWrapping="Wrap" Text="{Binding GameServices.RedPieces}" VerticalAlignment="Top" Height="20" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="#D8B654"/>
+        <TextBlock HorizontalAlignment="Left" Margin="820,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="30" Height="51" Width="115"/>
+        <TextBlock HorizontalAlignment="Left" Margin="890,305,0,0" TextWrapping="Wrap" Text="{Binding PlayerTurn.PlayerColor}" VerticalAlignment="Top" Foreground="#D8B654" FontFamily="Times New Roman" FontSize="60" FontWeight="Bold" Height="65" Width="165"/>
     </Grid>
 </Window>

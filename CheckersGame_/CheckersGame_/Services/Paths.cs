@@ -13,9 +13,9 @@ namespace Checkers.Services
         public const string redKingPiece = "/CheckersGame_;component/Resources/pieceRedKing.png";
         public const string whiteKingPiece = "/CheckersGame_;component/Resources/pieceWhiteKing.png";
         public const string backgroundLight = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\backgroundLight.jpg";
-        public const string backgroundDark = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\backgroundDark.jpg";
+        public const string backgroundDark = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\backgroundDark.png";
         public const string availableMoves = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\availableMoves.png";
-        public const string aboutFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Checkers_Game\\Checkers_Game\\Resorces\\about.txt";
+        public const string aboutFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\about.txt";
         public const string scoreFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\score.txt";
         public const string statisticsFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\statistics.txt";
         public const string maxPiecesFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\maxPieces.txt";
