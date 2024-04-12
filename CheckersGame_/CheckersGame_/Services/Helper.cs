@@ -132,7 +132,7 @@ namespace CheckersGame_.Services
             }
         }
 
-        public static void ResetGame(ObservableCollection<ObservableCollection<Cell>> cells,GameServices gameServices)
+        public static void ResetGame(ObservableCollection<ObservableCollection<Cell>> cells,PieceService gameServices)
         {
             currentNeighbours.Clear();
             CurrentCell = null;
@@ -181,7 +181,7 @@ namespace CheckersGame_.Services
             return score;
         }
 
-        public static void SaveGame(ObservableCollection<ObservableCollection<Cell>> board,GameServices gameServices)
+        public static void SaveGame(ObservableCollection<ObservableCollection<Cell>> board,PieceService gameServices)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             bool? answer = saveFileDialog.ShowDialog();
@@ -266,7 +266,7 @@ namespace CheckersGame_.Services
         }
 
 
-        public static void  OpenGame(ObservableCollection<ObservableCollection<Cell>> board , GameServices gameServices, Player turn)
+        public static void  OpenGame(ObservableCollection<ObservableCollection<Cell>> board , PieceService gameServices, Player turn)
         {
            
             OpenFileDialog openFileDialog=new OpenFileDialog();

@@ -17,18 +17,18 @@ namespace CheckersGame_.Services
     {
         private ObservableCollection<ObservableCollection<Cell>> board;
         private Player playerTurn;
-        private GameServices gameServices;
+        private PieceService pieceServices;
         private Score score;
         private bool extraJump ;
         private bool multipleJump;
         private static int MAX_PIECE_RED = 0;
         private static int MAX_PIECE_WHITE = 0;
 
-        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn, GameServices game)
+        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn, PieceService game)
         {
             this.board = cells;
             this.playerTurn = turn;
-            this.gameServices = game;
+            this.pieceServices = game;
             this.score = Helper.GetScore();
             extraJump = false;
             SetMaxPieces();
@@ -177,11 +177,11 @@ namespace CheckersGame_.Services
         {
             if (Helper.CurrentCell.Piece.ColorPiece == PieceColor.Red)
             {
-                gameServices.WhitePieces--;
+                pieceServices.WhitePieces--;
             }
             else
             {
-                gameServices.RedPieces--;
+                pieceServices.RedPieces--;
             }
         }
 
@@ -190,23 +190,23 @@ namespace CheckersGame_.Services
         {
             score = Helper.GetScore();
 
-            if (gameServices.RedPieces == 0 || gameServices.RedPieces < gameServices.WhitePieces)
+            if (pieceServices.RedPieces == 0 || pieceServices.RedPieces < pieceServices.WhitePieces)
             {
                 score.WhiteWinner = score.WhiteWinner + 1;
                 Helper.WriteScore(score.RedWinner, score.WhiteWinner);
             }
-            else if (gameServices.WhitePieces == 0 || gameServices.WhitePieces < gameServices.RedPieces)
+            else if (pieceServices.WhitePieces == 0 || pieceServices.WhitePieces < pieceServices.RedPieces)
             {
                 score.RedWinner = score.RedWinner + 1;
                 Helper.WriteScore(score.RedWinner, score.WhiteWinner);
             }
 
-            if (gameServices.RedPieces > MAX_PIECE_RED)
-                MAX_PIECE_RED = gameServices.RedPieces;
-            if (gameServices.WhitePieces > MAX_PIECE_WHITE)
-                MAX_PIECE_WHITE = gameServices.WhitePieces;
+            if (pieceServices.RedPieces > MAX_PIECE_RED)
+                MAX_PIECE_RED = pieceServices.RedPieces;
+            if (pieceServices.WhitePieces > MAX_PIECE_WHITE)
+                MAX_PIECE_WHITE = pieceServices.WhitePieces;
 
-            if (gameServices.WhitePieces > gameServices.RedPieces)
+            if (pieceServices.WhitePieces > pieceServices.RedPieces)
                 MessageBox.Show("Player white win!");
             else
                 MessageBox.Show("Player red win!");
@@ -279,8 +279,8 @@ namespace CheckersGame_.Services
                 if (MovePiece(cell))
                 {
                     cell.Piece = Helper.CurrentCell.Piece;
-                    MoveOverPiece(cell);
                     SetKingPiece(cell);
+                    MoveOverPiece(cell);
                     Helper.CurrentCell.Piece = null;
 
 
@@ -296,7 +296,7 @@ namespace CheckersGame_.Services
                     }
 
 
-                    if (gameServices.RedPieces == 0 || gameServices.WhitePieces == 0)
+                    if (pieceServices.RedPieces == 0 || pieceServices.WhitePieces == 0)
                     {
                         WriteScore();
                         ResetGame();
@@ -312,18 +312,18 @@ namespace CheckersGame_.Services
             playerTurn.PlayerColor = PieceColor.Red;
             playerTurn.ImagePath = Paths.redPiece;
             score = Helper.GetScore();
-            Helper.ResetGame(board, gameServices);
+            Helper.ResetGame(board, pieceServices);
         }
 
         public void Open()
         {
-            Helper.OpenGame(board, gameServices, playerTurn);
+            Helper.OpenGame(board, pieceServices, playerTurn);
         }
 
 
         public void SaveGame()
         {
-            Helper.SaveGame(board, gameServices);
+            Helper.SaveGame(board, pieceServices);
         }
 
         public void About()

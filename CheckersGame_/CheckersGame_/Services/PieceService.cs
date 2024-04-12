@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace CheckersGame_.Services
 {
-    class GameServices : BaseNotification
+    class PieceService : BaseNotification
     {
         GameVM game;
         private int redPieces;
         private int whitePieces;
 
-        public event EventHandler PiecesChanged;
-
-       public GameServices( GameVM game)
+       public PieceService( GameVM game)
         {
             this.game = game;
             this.redPieces = 12;

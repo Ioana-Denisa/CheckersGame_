@@ -57,7 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Commands\NonGenericCommands.cs" />
     <Compile Include="Services\GameLogic.cs" />
-    <Compile Include="Services\GameServices.cs" />
+    <Compile Include="Services\PieceService.cs" />
     <Compile Include="Services\Helper.cs" />
     <Compile Include="Services\Paths.cs" />
     <Compile Include="ViewModels\CellVM.cs" />
@@ -111,9 +111,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\backgroundLight.jpg" />
     <Resource Include="Resources\pieceRed.png" />
@@ -137,7 +135,7 @@
     <Resource Include="Resources\maxPieces.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\backgroundDark.png" />
+    <Resource Include="Resources\backgroundDark.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

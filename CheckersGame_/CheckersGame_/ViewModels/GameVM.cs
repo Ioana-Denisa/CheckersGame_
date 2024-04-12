@@ -14,7 +14,7 @@ namespace CheckersGame_.ViewModels
     {
         private GameLogic game;
         private Player playerTurn;
-        private GameServices gameServices;
+        private PieceService pieceService;
         private int redPiece;
         private int whitePiece;
 
@@ -23,8 +23,8 @@ namespace CheckersGame_.ViewModels
         {
             ObservableCollection<ObservableCollection<Cell>> board = Helper.InitGameBoard();
             PlayerTurn = new Player(PieceColor.Red);
-            GameServices = new GameServices(this);
-            game = new GameLogic(board, PlayerTurn, gameServices);
+            PieceService = new PieceService(this);
+            game = new GameLogic(board, PlayerTurn, pieceService);
             gameBoard = CellBoardToCellVMBoard(board);
             menuCommands = new MenuCommandsVM(game);
             redPiece = Helper.GetScore().RedWinner;
@@ -88,13 +88,13 @@ namespace CheckersGame_.ViewModels
             }
         }
 
-        public GameServices GameServices
+        public PieceService PieceService
         {
-            get { return gameServices; }
+            get { return pieceService; }
             set
             {
-                gameServices = value;
-                NotifyPropertyChanged("GameServices");
+                pieceService = value;
+                NotifyPropertyChanged("PieceService");
             }
         }
 
