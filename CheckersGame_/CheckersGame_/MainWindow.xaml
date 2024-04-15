@@ -11,9 +11,9 @@
     </Window.DataContext>
     <Grid Margin="0,0,0,-1">
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\Resources\Checkers Game.png"/>
+            <ImageBrush ImageSource="C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\Resources\background.png"/>
         </Grid.Background>
-        <ItemsControl Name="grid" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="108,109,0,0" BorderBrush="Black" BorderThickness="3" Height="565" Width="567">
+        <ItemsControl Name="grid" Background="Black" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,74,0,0" BorderBrush="#D4CCA0" BorderThickness="2" Height="565" Width="565">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <ItemsControl ItemsSource="{Binding}">
@@ -24,15 +24,16 @@
                         </ItemsControl.ItemsPanel>
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Border x:Name="border" Width="70" Height="70" BorderThickness="2" BorderBrush="#000000">
+                                <Border x:Name="border" Width="70" Height="70" BorderThickness="1" BorderBrush="#D4CCA0">
                                     <Button Command="{Binding ClickCommand}" CommandParameter="{Binding CellViewModel}">
                                         <Button.Template>
                                             <ControlTemplate TargetType="Button">
                                                 <Grid>
                                                     <Border BorderBrush="Transparent" BorderThickness="1">
-                                                        <Image Source="{Binding CellViewModel.BackgroundCell}" Stretch="UniformToFill"/>
+                                                        <Image Source="{Binding CellViewModel.BackgroundCell}" Width="70" 
+                                                              Height="70" Stretch="UniformToFill"/>
                                                     </Border>
-                                                    <Image Source="{Binding CellViewModel.Piece.ImagePath}" Width="60" Height="60"/>
+                                                    <Image Source="{Binding CellViewModel.Piece.ImagePath}" Width="70" Height="70"/>
                                                 </Grid>
                                             </ControlTemplate>
                                         </Button.Template>
@@ -52,7 +53,7 @@
                 <MenuItem Header="Statistic" Command="{Binding menuCommands.StatisticsCommand}"/>
                 <MenuItem>
                     <MenuItem.Header>
-                        <CheckBox Foreground="Black" Content="Allow Multiple Jumps" IsChecked="{Binding MultipleJump}"/>
+                        <CheckBox Foreground="Black" Content="Allow Multiple Jumps" IsChecked="{Binding GameLogic.MultipleJump}"/>
                     </MenuItem.Header>
                 </MenuItem>
             </MenuItem>
@@ -60,9 +61,9 @@
                 <MenuItem Header="About"  Command="{Binding menuCommands.AboutCommand}"/>
             </MenuItem>
         </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="985,116,0,0" TextWrapping="Wrap" Text="{Binding PieceService.WhitePieces}" VerticalAlignment="Top" Height="20" Width="55" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="Black" />
-        <TextBlock Margin="1010,619,35,0" TextWrapping="Wrap" Text="{Binding PieceService.RedPieces}" VerticalAlignment="Top" Height="20" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1025,59,0,0" TextWrapping="Wrap" Text="{Binding PieceService.WhitePieces}" VerticalAlignment="Top" Height="20" Width="55" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="#D4CCA0" />
+        <TextBlock Margin="1025,561,20,0" TextWrapping="Wrap" Text="{Binding PieceService.RedPieces}" VerticalAlignment="Top" Height="20" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="20" Foreground="#D4CCA0"/>
         <TextBlock HorizontalAlignment="Left" Margin="820,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Times New Roman" FontWeight="Bold" FontStyle="Italic" FontSize="30" Height="51" Width="115"/>
-        <TextBlock HorizontalAlignment="Left" Margin="865,349,0,0" TextWrapping="Wrap" Text="{Binding PlayerTurn.PlayerColor}" VerticalAlignment="Top" Foreground="Black" FontFamily="Times New Roman" FontSize="60" FontWeight="Bold" Height="65" Width="165"/>
+        <TextBlock HorizontalAlignment="Left" Margin="885,300,0,0" TextWrapping="Wrap" Text="{Binding PlayerTurn.Color}" VerticalAlignment="Top" Foreground="#D4CCA0" FontFamily="Times New Roman" FontSize="60" FontWeight="Bold" Height="65" Width="165"/>
     </Grid>
 </Window>

@@ -111,22 +111,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\redKingPiece.png" />
+    <Resource Include="Resources\redPiece.png" />
+    <Resource Include="Resources\whiteKingPiece.png" />
+    <Resource Include="Resources\whitePiece.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\backgroundLight.jpg" />
-    <Resource Include="Resources\pieceRed.png" />
-    <Resource Include="Resources\pieceRedKing.png" />
-    <Resource Include="Resources\pieceWhite.png" />
-    <Resource Include="Resources\pieceWhiteKing.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\about.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\score.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pieceWhite.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\statistics.txt" />
