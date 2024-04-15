@@ -1,3 +1,4 @@
-Score: Red 12 White: 5
-Maximum number of white pieces: 3
-Maximum number of red pieces: 11
+Score:
+Red 14  VS  White: 7
+Maximum number of white pieces: 11. 😊
+Maximum number of red pieces: 11. 😊
