@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckersGame_.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="750" MinWidth="1000" Height="750" Width="1100" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" MinHeight="750" MinWidth="1000" MaxHeight="750" MaxWidth="1100" WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <local:GameVM />
     </Window.DataContext>
@@ -13,7 +13,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ioana\source\repos\MAP\Chechers\CheckersGame_\CheckersGame_\Resources\background.png"/>
         </Grid.Background>
-        <ItemsControl Name="grid" Background="Black" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,74,0,0" BorderBrush="#D4CCA0" BorderThickness="2" Height="565" Width="565">
+        <ItemsControl  Background="Black" ItemsSource="{Binding GameBoard}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,74,0,0" BorderBrush="#D4CCA0" BorderThickness="2" Height="565" Width="565">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <ItemsControl ItemsSource="{Binding}">

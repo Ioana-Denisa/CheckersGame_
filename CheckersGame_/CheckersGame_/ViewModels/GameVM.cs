@@ -48,16 +48,6 @@ namespace CheckersGame_.ViewModels
             return result;
         }
 
-        public bool MultipleJump
-        {
-            get { return game.MultipleJump; }
-            set
-            {
-                game.MultipleJump = value;
-                NotifyPropertyChanged("MultipleJump");
-            }
-        }
-
         public int RedPieces
         {
             get { return redPiece; }

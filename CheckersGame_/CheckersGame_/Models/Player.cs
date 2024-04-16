@@ -21,13 +21,13 @@ namespace Checkers.Models
                 imagePath = Paths.redPiece;
         }
 
-        public PieceColor PlayerColor
+        public PieceColor Color
         {
             get { return color; }
             set
             {
                 color = value;
-                NotifyPropertyChanged("PlayerColor");
+                NotifyPropertyChanged("Color");
             }
         }
 

@@ -43,17 +43,6 @@ namespace CheckersGame_.ViewModels
                 NotifyPropertyChanged("CellViewModel");
             }
         }
-
-        //public bool IsAvailable
-        //{
-        //    get { return cellViewModel.IsAvailable; }
-        //    set
-        //    {
-        //        cellViewModel.IsAvailable = value;
-        //        NotifyPropertyChanged();
-        //    }
-        //}
-
         public ICommand ClickCommand
 
         {

@@ -8,16 +8,15 @@ namespace Checkers.Services
 {
     class Paths
     {
-        public const string redPiece = "/CheckersGame_;component/Resources/pieceRed.png";
-        public const string whitePiece = "/CheckersGame_;component/Resources/pieceWhite.png";
-        public const string redKingPiece = "/CheckersGame_;component/Resources/pieceRedKing.png";
-        public const string whiteKingPiece = "/CheckersGame_;component/Resources/pieceWhiteKing.png";
-        public const string backgroundLight = "/CheckersGame_;component/Resources/backgroundLight.jpg";
-        public const string backgroundDark = "/CheckersGame_;component/Resources/backgroundDark.jpg";
-        public const string availableMoves = "/CheckersGame_;component/Resources/availableMoves.png";
-        public const string aboutFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\about.txt";
-        public const string scoreFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\score.txt";
-        public const string statisticsFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\statistics.txt";
-        public const string maxPiecesFile = "C:\\Users\\Ioana\\source\\repos\\MAP\\Chechers\\CheckersGame_\\CheckersGame_\\Resources\\maxPieces.txt";
+        public const string redPiece = "../../Resources/redPiece.png";
+        public const string whitePiece = "../../Resources/whitePiece.png";
+        public const string redKingPiece = "../../Resources/redKingPiece.png";
+        public const string whiteKingPiece = "../../Resources/whiteKingPiece.png";
+        public const string backgroundLight = "../../Resources/backgroundLight.jpg";
+        public const string backgroundDark = "../../Resources/backgroundDark.jpg";
+        public const string aboutFile = "../../Resources/about.txt";
+        public const string scoreFile = "../../Resources/score.txt";
+        public const string statisticsFile = "../../Resources/statistics.txt";
+        public const string maxPiecesFile = "../../Resources/maxPieces.txt";
     }
 }

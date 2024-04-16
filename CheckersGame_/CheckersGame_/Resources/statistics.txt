@@ -1,4 +1,4 @@
 Score:
-Red 14  VS  White: 7
+Red 15  VS  White: 9
 Maximum number of white pieces: 11. 😊
 Maximum number of red pieces: 11. 😊

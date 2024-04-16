@@ -1,4 +1,4 @@
-﻿Game Title: Draughts Duel
+﻿Game Title: Checkers game
 
 Created by: Mitrofan Ioana-Denisa
 E-mail: ioana.mitrofan@student.unitbv.ro
@@ -6,7 +6,7 @@ Student at Transylvania University of Brasov
 Group 10LF223
 
 Game Overview:
-Draughts Duel is a digital adaptation of the classic board game Checkers, designed as a project for university assignment. It features various game mechanics and functionalities aimed at providing an engaging gaming experience.
+Checkers game is a digital adaptation of the classic board game Checkers, designed as a project for university assignment. It features various game mechanics and functionalities aimed at providing an engaging gaming experience.
 
 Key Features:
 Simple Jump: Players can move their pieces diagonally, capturing their opponent's pieces by jumping over them.

@@ -21,17 +21,17 @@ namespace CheckersGame_.Services
         public static Cell CurrentCell  { get; set; }
         public static List<Cell> currentNeighbours = new List<Cell>();
         public static Player playerTurn=new Player(PieceColor.Red);
-       // public static Score score = new Score(0, 0);
-
         public const int boardSize = 8;
+        public static bool multiple;
+
 
         public static ObservableCollection<ObservableCollection<Cell>> InitGameBoard()
         {
             ObservableCollection<ObservableCollection<Cell>> gameBoard = new ObservableCollection<ObservableCollection<Cell>>();
-            for (int row = 0; row < 8; row++)
+            for (int row = 0; row < boardSize; row++)
             {
                 ObservableCollection<Cell> rowCells = new ObservableCollection<Cell>();
-                for (int col = 0; col < 8; col++)
+                for (int col = 0; col < boardSize; col++)
                 {
                     string imagePath = GetBackgroundForRowCol(row, col);
                     Piece piece = GetPiece(row, col);
@@ -72,9 +72,9 @@ namespace CheckersGame_.Services
         private static string GetBackgroundForRowCol(int row, int col)
         {
             if ((row + col) % 2 == 0)
-                return Paths.backgroundLight;
-            else
                 return Paths.backgroundDark;
+            else
+                return Paths.backgroundLight;
 
         }
        
@@ -122,9 +122,9 @@ namespace CheckersGame_.Services
 
         public static void ResetBoardGame(ObservableCollection<ObservableCollection<Cell>> board)
         {
-            for (int row = 0; row < 8; row++)
+            for (int row = 0; row < boardSize; row++)
             {
-                for (int col = 0; col < 8; col++)
+                for (int col = 0; col < boardSize; col++)
                 {
                     Piece piece = GetPiece(row, col);
                     board[row][col].Piece = piece;
@@ -138,7 +138,7 @@ namespace CheckersGame_.Services
             CurrentCell = null;
             gameServices.WhitePieces = 12;
             gameServices.RedPieces = 12;
-            playerTurn.PlayerColor = PieceColor.Red;
+            playerTurn.Color = PieceColor.Red;
             ResetBoardGame(cells);
 
         }
@@ -148,7 +148,7 @@ namespace CheckersGame_.Services
 
             using (var reader = new StreamReader(pathFile))
             {
-                MessageBox.Show(reader.ReadToEnd(), "About", MessageBoxButton.OK);
+                MessageBox.Show(reader.ReadToEnd(), "About 😊", MessageBoxButton.OK);
             }
         }
 
@@ -173,15 +173,11 @@ namespace CheckersGame_.Services
                 string[] scores = line.Split(' ');
                 score.RedWinner = int.Parse(scores[0]);
                 score.WhiteWinner = int.Parse(scores[1]);
-
             }
-
-            Console.WriteLine("Get Rosu: "+score.RedWinner+" alb"+score.WhiteWinner);
-
             return score;
         }
 
-        public static void SaveGame(ObservableCollection<ObservableCollection<Cell>> board,PieceService gameServices)
+        public static void SaveGame(ObservableCollection<ObservableCollection<Cell>> board,PieceService gameServices, bool multipleJump)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             bool? answer = saveFileDialog.ShowDialog();
@@ -191,7 +187,8 @@ namespace CheckersGame_.Services
                 var pathFile=saveFileDialog.FileName;
                 using(var writer =new StreamWriter(pathFile))
                 {
-                    writer.WriteLine(playerTurn.PlayerColor);
+                    writer.WriteLine(multipleJump);
+                    writer.WriteLine(playerTurn.Color);
                     writer.WriteLine(gameServices.RedPieces);
                     writer.WriteLine(gameServices.WhitePieces);
 
@@ -278,21 +275,28 @@ namespace CheckersGame_.Services
 
                 using(var reader=new StreamReader(pathFile)) 
                 {
+
                     string text;
+                    text = reader.ReadLine();
+                    if(text =="True")
+                        multiple = true;
+                    else
+                        multiple= false;
+
                     text = reader.ReadLine();
                     if (text == "Red")
                     {
-                        playerTurn.PlayerColor = PieceColor.Red;
+                        playerTurn.Color = PieceColor.Red;
                         playerTurn.ImagePath=Paths.redPiece;
                         turn.ImagePath = playerTurn.ImagePath;
-                        turn.PlayerColor = playerTurn.PlayerColor;
+                        turn.Color = playerTurn.Color;
                     }    
                     else
                     {
-                        playerTurn.PlayerColor = PieceColor.White;
+                        playerTurn.Color = PieceColor.White;
                         playerTurn.ImagePath = Paths.whitePiece;
                         turn.ImagePath = playerTurn.ImagePath;
-                        turn.PlayerColor = playerTurn.PlayerColor;
+                        turn.Color = playerTurn.Color;
                     }
 
                     text=reader.ReadLine();
@@ -300,9 +304,9 @@ namespace CheckersGame_.Services
                     text=reader.ReadLine();
                     gameServices.WhitePieces=int.Parse(text);
 
-                    for(int i=0;i<8;i++)
+                    for(int i=0;i<boardSize;i++)
                     {
-                        for (int j=0;j<8;j++)
+                        for (int j=0;j<boardSize;j++)
                         {
                             text = reader.ReadLine();
                             string[] splitted = text.Split(',');

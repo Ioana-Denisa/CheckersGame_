@@ -19,18 +19,19 @@ namespace CheckersGame_.Services
         private Player playerTurn;
         private PieceService pieceServices;
         private Score score;
-        private bool extraJump ;
+        private bool extraJump;
         private bool multipleJump;
         private static int MAX_PIECE_RED = 0;
         private static int MAX_PIECE_WHITE = 0;
 
-        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn, PieceService game)
+        public GameLogic(ObservableCollection<ObservableCollection<Cell>> cells, Player turn, PieceService pieceService)
         {
             this.board = cells;
             this.playerTurn = turn;
-            this.pieceServices = game;
+            this.pieceServices = pieceService;
             this.score = Helper.GetScore();
             extraJump = false;
+            multipleJump = false;
             SetMaxPieces();
             Statistics();
         }
@@ -145,23 +146,23 @@ namespace CheckersGame_.Services
         {
             if (cell.Piece.ColorPiece == PieceColor.White)
             {
-                Helper.PlayerTurn.PlayerColor = PieceColor.Red;
+                Helper.PlayerTurn.Color = PieceColor.Red;
                 Helper.PlayerTurn.ImagePath = Paths.redPiece;
-                playerTurn.PlayerColor = PieceColor.Red;
+                playerTurn.Color = PieceColor.Red;
                 playerTurn.ImagePath = Paths.redPiece;
 
             }
             else
             {
-                Helper.PlayerTurn.PlayerColor = PieceColor.White;
+                Helper.PlayerTurn.Color = PieceColor.White;
                 Helper.PlayerTurn.ImagePath = Paths.whitePiece;
-                playerTurn.PlayerColor = PieceColor.White;
+                playerTurn.Color = PieceColor.White;
                 playerTurn.ImagePath = Paths.whitePiece;
             }
             Helper.currentNeighbours.Clear();
         }
 
-        private bool MovePiece(Cell destination)
+        private bool CanMovePiece(Cell destination)
         {
             foreach (Cell selected in Helper.CurrentNeighbourns)
             {
@@ -173,7 +174,7 @@ namespace CheckersGame_.Services
             return false;
         }
 
-        private void DropPieces()
+        private void DropNumberOfPieces()
         {
             if (Helper.CurrentCell.Piece.ColorPiece == PieceColor.Red)
             {
@@ -207,9 +208,9 @@ namespace CheckersGame_.Services
                 MAX_PIECE_WHITE = pieceServices.WhitePieces;
 
             if (pieceServices.WhitePieces > pieceServices.RedPieces)
-                MessageBox.Show("Player white win!");
+                MessageBox.Show("End game. \U0001F632\nCongratulations WHITE player, you won!\U0001F44F\U0001F60A");
             else
-                MessageBox.Show("Player red win!");
+                MessageBox.Show("End game. \U0001F632\nCongratulations RED player, you won! \U0001F44F\U0001F60A");
 
             Statistics();
             WriteMaxPieces();
@@ -221,25 +222,25 @@ namespace CheckersGame_.Services
             if (Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y + 2 == destination.Position.y)
             {
                 extraJump = true;
-                DropPieces();
+                DropNumberOfPieces();
                 board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y + 1].Piece = null;
             }
             else if (Helper.CurrentCell.Position.x + 2 == destination.Position.x && Helper.CurrentCell.Position.y - 2 == destination.Position.y)
             {
                 extraJump = true;
-                DropPieces();
+                DropNumberOfPieces();
                 board[Helper.CurrentCell.Position.x + 1][Helper.CurrentCell.Position.y - 1].Piece = null;
             }
             else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y - 2 == destination.Position.y)
             {
                 extraJump = true;
-                DropPieces();
+                DropNumberOfPieces();
                 board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y - 1].Piece = null;
             }
             else if (Helper.CurrentCell.Position.x - 2 == destination.Position.x && Helper.CurrentCell.Position.y + 2 == destination.Position.y)
             {
                 extraJump = true;
-                DropPieces();
+                DropNumberOfPieces();
                 board[Helper.CurrentCell.Position.x - 1][Helper.CurrentCell.Position.y + 1].Piece = null;
             }
             if (!multipleJump || !VerifyMultipleJump(destination) )
@@ -269,14 +270,14 @@ namespace CheckersGame_.Services
 
         public void ClickAction(Cell cell)
         {
-            if (cell != Helper.CurrentCell && cell.Piece != null && cell.Piece.ColorPiece == playerTurn.PlayerColor && !extraJump)
+            if (cell != Helper.CurrentCell && cell.Piece != null && cell.Piece.ColorPiece == playerTurn.Color && !extraJump)
             {
                 Helper.CurrentCell = cell;
                 SearchPosibleMoves(cell);
             }
             else if (cell.Piece == null)
             {
-                if (MovePiece(cell))
+                if (CanMovePiece(cell))
                 {
                     cell.Piece = Helper.CurrentCell.Piece;
                     SetKingPiece(cell);
@@ -309,21 +310,23 @@ namespace CheckersGame_.Services
 
         public void ResetGame()
         {
-            playerTurn.PlayerColor = PieceColor.Red;
+            playerTurn.Color = PieceColor.Red;
             playerTurn.ImagePath = Paths.redPiece;
             score = Helper.GetScore();
             Helper.ResetGame(board, pieceServices);
         }
 
-        public void Open()
-        {
-            Helper.OpenGame(board, pieceServices, playerTurn);
-        }
 
 
         public void SaveGame()
         {
-            Helper.SaveGame(board, pieceServices);
+            Helper.SaveGame(board, pieceServices, multipleJump);
+        }
+        public void Open()
+        {
+            Helper.OpenGame(board, pieceServices, playerTurn);
+            MultipleJump = Helper.multiple;
+   
         }
 
         public void About()
@@ -335,9 +338,9 @@ namespace CheckersGame_.Services
         {
             using (StreamWriter writer = new StreamWriter(Paths.statisticsFile, false))
             {
-                writer.WriteLine("Score: Red " + score.RedWinner + " White: " + score.WhiteWinner);
-                writer.WriteLine("Maximum number of white pieces: " + MAX_PIECE_WHITE);
-                writer.WriteLine("Maximum number of red pieces: " + MAX_PIECE_RED);
+                writer.WriteLine("Score:\nRed " + score.RedWinner + "  VS  White: " + score.WhiteWinner);
+                writer.WriteLine("Maximum number of white pieces: " + MAX_PIECE_WHITE+ ". 😊");
+                writer.WriteLine("Maximum number of red pieces: " + MAX_PIECE_RED+ ". 😊");
             }
         }
 
@@ -347,7 +350,7 @@ namespace CheckersGame_.Services
 
             using (var reader = new StreamReader(Paths.statisticsFile))
             {
-                MessageBox.Show(reader.ReadToEnd(), "Statistics", MessageBoxButton.OK);
+                MessageBox.Show(reader.ReadToEnd(), "Statistics 😊", MessageBoxButton.OK);
             }
         }
 
